@@ -1,16 +1,17 @@
-from urlparse import urljoin
+#!/usr/bin/env python
+import urlparse
 import urllib2
-from bs4 import BeautifulSoup
+import bs4
 import datetime
 import PyRSS2Gen
 
 def make_external(url):
-    return urljoin("http://www.koka36.de", url)
+    return urlparse.urljoin("http://www.koka36.de", url)
 
 def main():
 
     html = urllib2.urlopen('http://www.koka36.de/neu_im_vorverkauf.php').read()
-    soup = BeautifulSoup(html)
+    soup = bs4.BeautifulSoup(html)
 
     items = []
 
