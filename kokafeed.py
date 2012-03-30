@@ -4,6 +4,7 @@ import urllib2
 import bs4
 import datetime
 import PyRSS2Gen
+import re
 
 def make_external(url):
     return urlparse.urljoin("http://www.koka36.de", url)
@@ -23,7 +24,7 @@ def main():
             item = PyRSS2Gen.RSSItem(
                     title = link.get_text(),
                     link = make_external(link.get('href')),
-                    description = link.get('onmouseover'),
+                    description = re.sub(r'return overlib\(\'([^)]*)\'\);', "\\1", link.get('onmouseover')),
                     guid = PyRSS2Gen.Guid(link.get('href')))
 
             items.append(item)
