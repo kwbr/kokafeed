@@ -36,7 +36,7 @@ def main():
             lastBuildDate = datetime.datetime.utcnow(),
             items = items)
 
-    rss.write_xml(open("neu.rss", "w"))
+    print rss.to_xml()
 
 if __name__ == '__main__':
     main()

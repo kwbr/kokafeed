@@ -7,7 +7,9 @@ Vorverkauf" Seite.
 ::
 
     $ virtualenv v
+    $ source v/bin/activate
     $ pip install -r requirements.txt
+    $ ./kokafeed.py > feed.rss
 
 Lizenz
 ------

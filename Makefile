@@ -1,13 +1,14 @@
 PWD		:= $(shell pwd)
+RSSFILE = feed.rss
 
 build:
-	./kokafeed.py
+	./kokafeed.py > ${RSSFILE}
 
 publish: build
 	scp neu.rss u8767@www.glorybox.de:de.glorybox.www/feeds
 
 clean:
-	-rm neu.rss
+	-rm ${RSSFILE}
 
 .PHONY: html clean
 
