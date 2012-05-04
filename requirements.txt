@@ -1,2 +1,8 @@
-beautifulsoup4
-PyRSS2Gen
+PyRSS2Gen==1.0.0
+beautifulsoup4==4.0.1
+certifi==0.0.8
+chardet==1.0.1
+distribute==0.6.24
+html5lib==0.95
+mechanize==0.2.5
+requests==0.10.8
