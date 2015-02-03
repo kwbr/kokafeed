@@ -32,11 +32,6 @@ def main():
         image = make_external(data.find('img').get('src'))
         link = make_external(event.find('a').get('href'))
 
-        print(title)
-        print(description)
-        print(image)
-        print(link)
-
         if title:
             item = PyRSS2Gen.RSSItem(
                     title = title,
