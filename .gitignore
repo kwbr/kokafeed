@@ -1,1 +1,7 @@
-*.rss
+*.egg-info
+*.egg
+.tox
+/AUTHORS
+/ChangeLog
+dist
+/agent.log
