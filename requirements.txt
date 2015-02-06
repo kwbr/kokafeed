@@ -1,2 +1,2 @@
 PyRSS2Gen==1.0.0
-beautifulsoup4==4.0.1
+beautifulsoup4==4.2.0
